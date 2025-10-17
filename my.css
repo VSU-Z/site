@@ -1,83 +1,199 @@
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f8f9fa;
-    color: #343a40;
-    line-height: 1.7;
+  font-family: 'Arial', sans-serif;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: black;
+  color: #19ff19;
+  line-height: 1.6;
+}
+main, .name, footer {
+  width: 80%;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
 }
 
-main, header, footer {
-    width: 85%;
-    max-width: 1000px;
-    margin: 0 auto;
-    padding: 20px;
+
+
+
+
+.panel {
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  background-color: black;
+  border-top: 1px solid #19ff19;
+  border-bottom: 1px solid #19ff19;
+  z-index: 100
+}
+.panel a {
+  color: #19ff19;
+  text-decoration: none
+}
+.panel > div {
+  padding: 5px
+}
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 20px;
+}
+.logo img {
+  width: 20px;
+}
+.pages {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  padding: 7px 10px 5px 10px !important;
+}
+.pages div {
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+  font-size: 14px;
+  border-radius: 5px;
+  width: 65px;
+  height: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  user-select: none;
+  padding: 3px 10px 3px 10px;
+  transition: 0.2s;
+}
+.pages div:after {
+  content: "";
+  position: absolute;
+  z-index: 0;
+  top: 10%;
+  right: 0;
+  cursor: pointer;
+  width: 10px;
+  height: 70%;
+  background-color: black;
+  box-shadow: -5px 0 5px black;
+  transition: background-color 0.2s, box-shadow 0.2s;
+}
+.pages div:hover:after {
+  width: 25px;
+  background-color: #0f380f;
+  box-shadow: -5px 0 5px #0f380f;
+}
+.pages div:hover  {
+  background-color: #0f380f;
+}
+.pages div:before {
+  content: "⤬";
+  display: none;
+  position: absolute;
+  z-index: 1;
+  cursor: pointer;
+  background-color: transparent;
+  width: 16px;
+  height: 16px;
+  top: 10%;
+  right: 3px;
+  border-radius: 5px
+}
+.pages div:hover:before {
+  display: inline;
+}
+.pages div:hover:before:hover {
+  background-color: #80ff80
+}
+.pages .me {
+  background-color: #0f700f
+}
+.pages .me:after {
+  background-color: #0f700f;
+  box-shadow: -5px 0 5px #0f700f;
+}
+.pages .me:hover {
+  background-color: #0f800f
+}
+.pages .me:hover:after {
+  background-color: #0f800f;
+  box-shadow: -5px 0 5px #0f800f;
+}
+.pages img {
+  width: 14px;
+  height: 14px;
+  vertical-align: middle;
+  margin-right: 7px
+}
+.buttons {
+  display: flex;
+  flex-direction: row;
+}
+.buttons div {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  cursor: pointer;
+  width: 35px;
+  padding: 0 2px;
+  border-radius: 5px;
+  transition: 0.2s
+}
+.buttons div:hover {
+  background-color: #372e4c
 }
 
-header {
-    background-color: #28a745;
-    color: white;
-    text-align: center;
-    padding: 50px 20px;
-    border-bottom: 5px solid #218838;
+
+
+.name {
+  position: relative;
+  background-color: black;
+  color: #19ff19;
+  margin-top: 60px !important;
+  text-align: center;
+  padding: 40px 20px;
+  box-shadow: inset 0 0 40px #008000;
+  border: 2px solid #008000;
+  animation: blink 1.5s infinite
+}
+@keyframes blink {
+  from {
+    box-shadow: inset 0 0 40px #008000;
+  }
+  50% {
+    box-shadow: inset 0 0 30px #008000;
+  }
+  to {
+    box-shadow: inset 0 0 40px #008000;
+  }
 }
 
-header h1 {
-    margin-top: 0;
-    font-size: 2.5em;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
-}
 
 section {
-    background-color: white;
-    padding: 30px;
-    margin-bottom: 30px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+  background-color: black;
+  background-image: repeating-linear-gradient(transparent, transparent 5px, rgba(0,112,0,0.15) 5px, rgba(0,112,0,0.15) 10px);
+  padding: 25px;
+  border: 10px dashed rgba(0,112,0,0.7);
+  margin-bottom: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-section h2 {
-    color: #28a745;
-    border-bottom: 2px solid #e9ecef;
-    padding-bottom: 12px;
-    margin-top: 0;
-    font-size: 1.8em;
+li {
+  list-style: none
 }
 
-.skills ul {
-    list-style-type: disc;
-    padding-left: 30px;
-}
-
-.skills li {
-    margin-bottom: 12px;
-}
-
-.contact p {
-    font-size: 1.1em;
-}
-
-footer {
-    text-align: center;
-    padding: 20px 0;
-    color: #868e96;
-    font-size: 0.9em;
-    border-top: 1px solid #dee2e6;
-}
 
 @media (max-width: 600px) {
-    header, main, footer {
-        width: 95%;
-        padding: 15px 10px;
-    }
-    header h1 {
-        font-size: 2em;
-    }
-    div {
-        padding: 20px;
-        margin-bottom: 20px;
-    }
-    div h2 {
-        font-size: 1.5em;
-    }
+  header, .name, footer {
+    width: 95%;
+    padding: 15px 10px;
+  }
+  header h1 {
+    font-size: 1.8em;
+  }
 }
