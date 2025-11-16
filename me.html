@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Данные</title>
     <link rel="stylesheet" href="my.css">
+    <script src="js.js"></script>
 </head>
 <body>
     <header class="panel">
@@ -12,7 +13,7 @@
         <img src="https://images.icon-icons.com/2552/PNG/96/opera_neon_browser_logo_icon_152973.png">
       </div>
       <div class="pages">
-        <div class="main"><a href="main.html"><img src="https://images.icon-icons.com/1572/PNG/96/3592865-documents-folder-file-folder-general-office-organize-user-interface_107763.png">Проект "DataVision"</a></div>
+        <div class="main"><a href="index.html"><img src="https://images.icon-icons.com/1572/PNG/96/3592865-documents-folder-file-folder-general-office-organize-user-interface_107763.png">Проект "DataVision"</a></div>
         <div class="me"><a href="me.html"><img src="https://images.icon-icons.com/1274/PNG/96/1497558461-49_84979.png">Партфолио</a></div>
       </div>
       <div class="buttons">
@@ -65,6 +66,25 @@
             <p>Email: -</p>
             <p>GitHub: -</p>
         </div>
+
+        <h2>Есть вопросы? Отправляйте их через форму ниже!</h2>
+
+        <form id="frm">
+            <p>
+                <label for="name">Имя:</label><br>
+                <input id="name" type="text" name="name">
+            </p>
+            <p>
+                <label for="mail">Почта для обратной связи:</label><br>
+                <input id="mail" type="email" name="mail">
+            </p>
+            <p>
+                <label for="mess">Сообщение:</label><br>
+                <textarea id="mess" name="mess" rows="5" cols="33"></textarea>
+            </p>
+            <input id="button" type="button" value="Отправить">
+        </form>
+
     </main>
 
 </body>
